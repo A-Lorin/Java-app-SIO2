@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" onMouseEntered="#initialize" prefHeight="477.0" prefWidth="962.0" style="-fx-background-color: #35393F;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controleur.SaisieBureauController">
+   <children>
+      <ImageView fitHeight="114.0" fitWidth="150.0" layoutX="67.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/logo_ATG.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="355.0" layoutY="38.0" prefHeight="56.0" prefWidth="252.0" style="-fx-text-fill: #FFFFFF;" text="Membres du bureau" textFill="#0a0a0a">
+         <font>
+            <Font size="27.0" />
+         </font>
+      </Label>
+      <TableView id="SaisieMembreTableview" fx:id="SaisieMembreTableview" layoutX="32.0" layoutY="139.0" prefHeight="258.0" prefWidth="881.0" style="-fx-border-color: #6C6F77;" stylesheets="@../assets/monCSS.css">
+        <columns>
+          <TableColumn id="SaisieMembreCId" fx:id="SaisieMembreTableviewCID" prefWidth="33.0" text="Id" />
+          <TableColumn id="SaisieMembreTableviewCFonction" fx:id="SaisieMembreTableviewCFonction" prefWidth="109.0" text="Fonction" />
+            <TableColumn id="SaisieMembreTableviewCNom" fx:id="SaisieMembreTableviewCNom" prefWidth="120.0" text="Nom" />
+            <TableColumn id="SaisieMembreTableviewCPrenom" fx:id="SaisieMembreTableviewCPrenom" prefWidth="113.0" text="Prénom" />
+            <TableColumn id="SaisieMembreTableviewCAdresse" fx:id="SaisieMembreTableviewCAdresse" prefWidth="87.0" text="Adresse" />
+            <TableColumn id="SaisieMembreTableviewCCp" fx:id="SaisieMembreTableviewCCp" prefWidth="43.0" text="CP" />
+            <TableColumn id="SaisieMembreTableviewCVille" fx:id="SaisieMembreTableviewCVille" prefWidth="135.0" text="Ville" />
+            <TableColumn id="SaisieMembreTableviewCEmail" fx:id="SaisieMembreTableviewCEmail" prefWidth="130.0" text="Email" />
+            <TableColumn id="SaisieMembreTableviewCPortable" fx:id="SaisieMembreTableviewCPortable" prefWidth="107.0" text="Portable" />
+        </columns>
+      </TableView>
+      <Button id="btnModifier" fx:id="btnModifier" layoutX="58.0" layoutY="420.0" mnemonicParsing="false" onAction="#EditMembreBureau" prefHeight="35.0" prefWidth="142.0" style="-fx-background-color: #677BC4; -fx-text-fill: #FEFEFF;" text="Modifier" />
+      <Button id="btnInsererMembreBureau" fx:id="btnInsererMembreBureau" layoutX="373.0" layoutY="420.0" mnemonicParsing="false" onAction="#AjoutEditMembreBureau" prefHeight="35.0" prefWidth="157.0" style="-fx-background-color: #677BC4; -fx-text-fill: #FEFEFF;" text="Insérer" />
+      <Button id="btnSupprimer" fx:id="btnSupprimer" layoutX="729.0" layoutY="420.0" mnemonicParsing="false" onAction="#supprimerUnMembreBureau" prefHeight="35.0" prefWidth="142.0" style="-fx-background-color: #677BC4; -fx-text-fill: #FEFEFF;" text="Supprimer" />
+   </children>
+</AnchorPane>

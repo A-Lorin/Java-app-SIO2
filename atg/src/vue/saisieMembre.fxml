@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="488.0" prefWidth="600.0" style="-fx-background-color: #35393F;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controleur.SaisieMembreController">
+   <children>
+      <Label layoutX="257.0" layoutY="44.0" style="-fx-text-fill: #FFFFFF;" text="Adhésion" textFill="WHITE">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <Label layoutX="25.0" layoutY="121.0" style="-fx-text-fill: #8A8E93;" text="Date" />
+      <Label layoutX="24.0" layoutY="159.0" style="-fx-text-fill: #8A8E93;" text="Identité" />
+      <Label layoutX="24.0" layoutY="201.0" style="-fx-text-fill: #8A8E93;" text="Adresse" />
+      <Label layoutX="27.0" layoutY="276.0" style="-fx-text-fill: #8A8E93;" text="Pays" />
+      <Label layoutX="25.0" layoutY="320.0" style="-fx-text-fill: #8A8E93;" text="Téléphone" />
+      <Label layoutX="27.0" layoutY="362.0" style="-fx-text-fill: #8A8E93;" text="Email" />
+      <Label layoutX="27.0" layoutY="401.0" style="-fx-text-fill: #8A8E93;" text="Somme versée" />
+      <DatePicker id="Ddate" fx:id="Ddate" editable="false" layoutX="85.0" layoutY="117.0" style="-fx-border-color: black; -fx-background-color: #303339; -fx-text-fill: #C7C8CA;" stylesheets="@../assets/monCSS.css" />
+      <ComboBox id="cmbCivilite" fx:id="cmbCivilite" layoutX="85.0" layoutY="155.0" prefHeight="25.0" prefWidth="174.0" style="-fx-background-color: #303339; -fx-border-color: black; -fx-text-fill: #C7C8CA;" stylesheets="@../assets/monCSS.css" />
+      <TextField id="tbxNom" fx:id="tbxNom" layoutX="271.0" layoutY="155.0" onAction="#autocomplete" onInputMethodTextChanged="#autocomplete" onKeyTyped="#autocomplete" onMouseExited="#autocomplete" promptText="nom" style="-fx-background-color: #303339; -fx-border-color: black; -fx-text-fill: #C7C8CA;" stylesheets="@../assets/monCSS.css" />
+      <TextField id="tbxPrenom" fx:id="tbxPrenom" layoutX="431.0" layoutY="155.0" onAction="#autocomplete" onInputMethodTextChanged="#autocomplete" onKeyTyped="#autocomplete" onMouseClicked="#autocomplete" onMouseExited="#autocomplete" onMouseMoved="#autocomplete" promptText="prénom" style="-fx-background-color: #303339; -fx-border-color: black; -fx-text-fill: #C7C8CA;" stylesheets="@../assets/monCSS.css" />
+      <TextField id="tbxAdresse" fx:id="tbxAdresse" layoutX="86.0" layoutY="201.0" prefHeight="25.0" prefWidth="351.0" promptText="adresse" style="-fx-background-color: #303339; -fx-border-color: black; -fx-text-fill: #C7C8CA;" />
+      <TextField id="tbxCodePostal" fx:id="tbxCodePostal" layoutX="86.0" layoutY="233.0" prefHeight="25.0" prefWidth="78.0" promptText="code postal" style="-fx-background-color: #303339; -fx-border-color: black; -fx-text-fill: #C7C8CA;" />
+      <TextField id="tbxVille" fx:id="tbxVille" layoutX="173.0" layoutY="233.0" prefHeight="25.0" prefWidth="264.0" promptText="ville" style="-fx-background-color: #303339; -fx-border-color: black; -fx-text-fill: #C7C8CA;" />
+      <TextField id="tbxPays" fx:id="tbxPays" layoutX="89.0" layoutY="272.0" prefHeight="25.0" prefWidth="149.0" promptText="pays" style="-fx-background-color: #303339; -fx-border-color: black; -fx-text-fill: #C7C8CA;" />
+      <TextField id="tbxTelFixe" fx:id="tbxTelFixe" layoutX="89.0" layoutY="316.0" promptText="fixe" style="-fx-background-color: #303339; -fx-border-color: black; -fx-text-fill: #C7C8CA;" />
+      <TextField id="tbxTelPortable" fx:id="tbxTelPortable" layoutX="259.0" layoutY="316.0" promptText="portable" style="-fx-background-color: #303339; -fx-border-color: black; -fx-text-fill: #C7C8CA;" />
+      <TextField id="tbxMail" fx:id="tbxMail" layoutX="89.0" layoutY="358.0" prefHeight="25.0" prefWidth="320.0" promptText="email" style="-fx-background-color: #303339; -fx-border-color: black; -fx-text-fill: #C7C8CA;" />
+      <TextField id="tbxSomme" fx:id="tbxSomme" layoutX="112.0" layoutY="397.0" promptText="montant" style="-fx-background-color: #303339; -fx-border-color: black; -fx-text-fill: #C7C8CA;" />
+      <Button id="btnInserer" fx:id="btnInserer" layoutX="181.0" layoutY="430.0" mnemonicParsing="false" onAction="#AjouterUnMembre" prefHeight="36.0" prefWidth="249.0" style="-fx-background-color: #677BC4; -fx-text-fill: #FEFEFF;" text="Enregistrer" />
+      <ImageView fitHeight="89.0" fitWidth="92.0" layoutX="35.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/logo_ATG.jpg" />
+         </image>
+      </ImageView>
+      <TextField fx:id="Idmember" cacheShape="false" centerShape="false" editable="false" focusTraversable="false" layoutX="231.0" layoutY="85.0" scaleShape="false" visible="false" />
+   </children>
+</AnchorPane>

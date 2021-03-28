@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #35393F;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controleur.MenuController">
+   <top>
+      <MenuBar style="-fx-background-color: #303339;" stylesheets="@../assets/monCSS.css" BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="Bureau">
+            <items>
+              <MenuItem fx:id="mBureauSaisie" mnemonicParsing="false" onAction="#afficherSaisieBureau" text="Saisie" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Membre">
+            <items>
+              <MenuItem fx:id="mMembreAdd" mnemonicParsing="false" onAction="#afficherInsertMembre" text="Saisie" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Reçu">
+            <items>
+              <MenuItem fx:id="mRecuEdit" mnemonicParsing="false" onAction="#afficherMembreSansRecu" text="Édition" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+   <center>
+      <ImageView fitHeight="332.0" fitWidth="332.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+         <image>
+            <Image url="@../assets/logo_ATG.jpg" />
+         </image>
+      </ImageView>
+   </center>
+</BorderPane>
